@@ -103,5 +103,17 @@ SET weight_kg = weight_kg * -1;
 -- Commit transaction
 COMMIT;
 
-  
+SELECT animals.* FROM animals INNER JOIN owners on animals.owner_id=owners.id WHERE owners.full_name='Melody Pond';
 
+
+SELECT animals.* FROM animals WHERE species_id=1;
+
+SELECT animals.* from owners LEFT JOIN animals ON animals.owner_id =owners.id;
+
+select species.name,count(*) from animals INNER JOIN species on species.id=animals.species_id GROUP BY species.name;
+
+select * from animals where owner_id=2 and species_id=2;
+
+select * from animals where owner_id=5 and escape_attempts=0;
+
+select full_name,age,owner_id from owners LEFT JOIN animals ON owners.id=animals.owner_id group by full_name,age,owner_id order by count(*) desc limit 1; 
