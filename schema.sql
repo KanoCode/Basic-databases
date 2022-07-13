@@ -47,3 +47,12 @@ ALTER TABLE animals
 CREATE TABLE visits(animal_id INTEGER, vet_id INTEGER, CONSTRAINT FK_animals FOREIGN KEY (animal_id) REFERENCES animals (id), CONSTRAINT FK_vets FOREIGN KEY (vet_id) REFERENCES vets (id) );
 
 ALTER TABLE visits ADD COLUMN date_of_visit DATE;
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+--Create an index inside owners table
+CREATE INDEX email_address_asc ON owners(email ASC);
+
+--Create index inside animals table
+
+CREATE INDEX animal_id_asc ON animals(animal_id ASC);
