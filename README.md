@@ -1,7 +1,8 @@
 # databases-projects
 
 > This repository contains all files associated with vet clinic database
-![]()
+![Vet Clinic ERD](https://user-images.githubusercontent.com/95347844/178766832-3a39bc03-5022-4b56-ac63-72429715b325.png)
+
 
 
 ## Getting Started
